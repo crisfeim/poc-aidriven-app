@@ -1,0 +1,154 @@
+<!-- © 2025 Cristian Felipe Patiño Rojas. Created on 24/5/25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Counter App</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    #counter {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+    input {
+      font-size: 1rem;
+      padding: 0.5rem;
+      width: 300px;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      margin-left: 0.5rem;
+    }
+    #error {
+      color: red;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 AI Counter</h1>
+  <div id="counter">0</div>
+  <input type="text" id="input" placeholder="Enter a command like: increase by 2" />
+  <button id="submit">Send</button>
+  <div id="error"></div>
+
+  <script>
+    const Command = {
+      increase: (value) => ({ type: "increase", value }),
+      decrease: (value) => ({ type: "decrease", value }),
+      set: (value) => ({ type: "set", value })
+    };
+
+    function parseCommand(jsonString) {
+      try {
+        const obj = JSON.parse(jsonString);
+        const [type, payload] = Object.entries(obj)[0];
+        if (typeof payload._0 === "number") {
+          return Command[type](payload._0);
+        }
+      } catch (_) {}
+      return null;
+    }
+
+    async function sendRequest(systemPrompt, userMessage, model, url) {
+      const body = JSON.stringify({
+        model,
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userMessage }
+        ],
+        stream: false
+      });
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body
+      });
+
+      if (!response.ok) throw new Error("Bad server response");
+      return await response.json();
+    }
+
+    async function mapToCommand(userInput, client) {
+      const response = await sendRequest(systemPrompt, userInput, client.model, client.url);
+      const content = (response.message || response.choices?.[0]?.message)?.content;
+      return parseCommand(content);
+    }
+
+    const Clients = {
+//    ollama: { model: "llama3.2", url: "http://localhost:11434/api/chat" },
+      // Uncomment if using LLM7
+      llm7Gpt3dot5Turbo: { model: "gpt-3.5-turbo", url: "https://api.llm7.io/v1/chat/completions" }
+    };
+
+    const systemPrompt = `
+You are an assistant that translates user instructions into system commands. The available commands are:
+
+{
+  "increase": {
+    "_0": <number>
+  }
+}
+{
+  "decrease": {
+    "_0": <number>
+  }
+}
+{
+  "set": {
+    "_0": <number>
+  }
+}
+
+Given the following user message, respond only with the corresponding command, without any explanations.
+
+Example:
+
+User: I want you to increase the counter by 3
+Response:
+{
+  "increase": {
+    "_0": 3
+  }
+}
+`;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const counterDisplay = document.getElementById("counter");
+      const inputField = document.getElementById("input");
+      const errorDisplay = document.getElementById("error");
+      let count = 0;
+
+      document.getElementById("submit").addEventListener("click", async () => {
+        const input = inputField.value;
+        errorDisplay.textContent = "";
+        inputField.disabled = true;
+
+        try {
+          const command = await mapToCommand(input, Clients.llm7Gpt3dot5Turbo);
+          if (!command) throw new Error("Invalid command");
+
+          switch (command.type) {
+            case "increase": count += command.value; break;
+            case "decrease": count -= command.value; break;
+            case "set": count = command.value; break;
+          }
+
+          counterDisplay.textContent = count;
+        } catch (e) {
+          errorDisplay.textContent = e.message;
+        } finally {
+          inputField.disabled = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
