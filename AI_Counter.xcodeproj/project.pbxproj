@@ -6,27 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		4070C44C2DE1796C007F01EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4070C4352DE1796A007F01EF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4070C43C2DE1796A007F01EF;
-			remoteInfo = AI_Counter;
-		};
-		4070C4562DE1796C007F01EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4070C4352DE1796A007F01EF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4070C43C2DE1796A007F01EF;
-			remoteInfo = AI_Counter;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4070C43D2DE1796A007F01EF /* AI_Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AI_Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4070C44B2DE1796C007F01EF /* AI_CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AI_CounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4070C4552DE1796C007F01EF /* AI_CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AI_CounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,34 +16,10 @@
 			path = AI_Counter;
 			sourceTree = "<group>";
 		};
-		4070C44E2DE1796C007F01EF /* AI_CounterTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AI_CounterTests;
-			sourceTree = "<group>";
-		};
-		4070C4582DE1796C007F01EF /* AI_CounterUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AI_CounterUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4070C43A2DE1796A007F01EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4070C4482DE1796C007F01EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4070C4522DE1796C007F01EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				4070C43F2DE1796A007F01EF /* AI_Counter */,
-				4070C44E2DE1796C007F01EF /* AI_CounterTests */,
-				4070C4582DE1796C007F01EF /* AI_CounterUITests */,
 				4070C43E2DE1796A007F01EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				4070C43D2DE1796A007F01EF /* AI_Counter.app */,
-				4070C44B2DE1796C007F01EF /* AI_CounterTests.xctest */,
-				4070C4552DE1796C007F01EF /* AI_CounterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,52 +70,6 @@
 			productReference = 4070C43D2DE1796A007F01EF /* AI_Counter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4070C44A2DE1796C007F01EF /* AI_CounterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4070C4622DE1796C007F01EF /* Build configuration list for PBXNativeTarget "AI_CounterTests" */;
-			buildPhases = (
-				4070C4472DE1796C007F01EF /* Sources */,
-				4070C4482DE1796C007F01EF /* Frameworks */,
-				4070C4492DE1796C007F01EF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4070C44D2DE1796C007F01EF /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4070C44E2DE1796C007F01EF /* AI_CounterTests */,
-			);
-			name = AI_CounterTests;
-			packageProductDependencies = (
-			);
-			productName = AI_CounterTests;
-			productReference = 4070C44B2DE1796C007F01EF /* AI_CounterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4070C4542DE1796C007F01EF /* AI_CounterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4070C4652DE1796C007F01EF /* Build configuration list for PBXNativeTarget "AI_CounterUITests" */;
-			buildPhases = (
-				4070C4512DE1796C007F01EF /* Sources */,
-				4070C4522DE1796C007F01EF /* Frameworks */,
-				4070C4532DE1796C007F01EF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4070C4572DE1796C007F01EF /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4070C4582DE1796C007F01EF /* AI_CounterUITests */,
-			);
-			name = AI_CounterUITests;
-			packageProductDependencies = (
-			);
-			productName = AI_CounterUITests;
-			productReference = 4070C4552DE1796C007F01EF /* AI_CounterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,14 +82,6 @@
 				TargetAttributes = {
 					4070C43C2DE1796A007F01EF = {
 						CreatedOnToolsVersion = 16.3;
-					};
-					4070C44A2DE1796C007F01EF = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = 4070C43C2DE1796A007F01EF;
-					};
-					4070C4542DE1796C007F01EF = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = 4070C43C2DE1796A007F01EF;
 					};
 				};
 			};
@@ -201,28 +100,12 @@
 			projectRoot = "";
 			targets = (
 				4070C43C2DE1796A007F01EF /* AI_Counter */,
-				4070C44A2DE1796C007F01EF /* AI_CounterTests */,
-				4070C4542DE1796C007F01EF /* AI_CounterUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4070C43B2DE1796A007F01EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4070C4492DE1796C007F01EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4070C4532DE1796C007F01EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,34 +122,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4070C4472DE1796C007F01EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4070C4512DE1796C007F01EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4070C44D2DE1796C007F01EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4070C43C2DE1796A007F01EF /* AI_Counter */;
-			targetProxy = 4070C44C2DE1796C007F01EF /* PBXContainerItemProxy */;
-		};
-		4070C4572DE1796C007F01EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4070C43C2DE1796A007F01EF /* AI_Counter */;
-			targetProxy = 4070C4562DE1796C007F01EF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4070C45D2DE1796C007F01EF /* Debug */ = {
@@ -443,74 +299,6 @@
 			};
 			name = Release;
 		};
-		4070C4632DE1796C007F01EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V73WZ9Y4HH;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "im.crisfe.AI-CounterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AI_Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AI_Counter";
-			};
-			name = Debug;
-		};
-		4070C4642DE1796C007F01EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V73WZ9Y4HH;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "im.crisfe.AI-CounterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AI_Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AI_Counter";
-			};
-			name = Release;
-		};
-		4070C4662DE1796C007F01EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V73WZ9Y4HH;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "im.crisfe.AI-CounterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = AI_Counter;
-			};
-			name = Debug;
-		};
-		4070C4672DE1796C007F01EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V73WZ9Y4HH;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "im.crisfe.AI-CounterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = AI_Counter;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -528,24 +316,6 @@
 			buildConfigurations = (
 				4070C4602DE1796C007F01EF /* Debug */,
 				4070C4612DE1796C007F01EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4070C4622DE1796C007F01EF /* Build configuration list for PBXNativeTarget "AI_CounterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4070C4632DE1796C007F01EF /* Debug */,
-				4070C4642DE1796C007F01EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4070C4652DE1796C007F01EF /* Build configuration list for PBXNativeTarget "AI_CounterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4070C4662DE1796C007F01EF /* Debug */,
-				4070C4672DE1796C007F01EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
